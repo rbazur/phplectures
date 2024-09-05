@@ -1,54 +1,36 @@
 <?php
 $output = null;
+$names = array('Juan', 'Maria', 'Ryan');
+$numbers = [1, 2, 3, 4, 5, 6];
 
-/*
-- `Y` - The year
-- `m` - The month
-- `d` - The day
-- `D` - The day of the week short name
-- `l` - The full day of the week name
-- `h` - The hour
-- `i` - The minute
-- `s` - The second
-- `a` - AM/PM
-*/
+function inspect($value)
+{
+    echo '<pre>';
+    var_dump($value);
+    echo '</pre>';
+    // die();
+}
 
-// Get year
-$output = date('Y');
+// inspect($names);
+// inspect($numbers);
 
-// Use a different date with a timestamp
-$output = date('Y', 936345600);
+// print_r($names);
 
-// Year for a different date
-$output = date('Y', strtotime('1982-06-25'));
+// echo $names; //error
+// echo $names[2];
+// echo $names[1];
 
-// Get month
-$output = date('m');
+//Add element to an array
+$numbers[] = 100;
+$numbers[] = 101;
 
-// Get day
-$output = date('d');
+$numbers[3] = 200;
 
-// Get day of the week
-$output = date('D');
-$output = date('l');
+unset($numbers[3]); //this will remove the index 3
 
-// Get hour
-$output = date('H');
-
-// Get minute
-$output = date('i');
-
-// Get second
-$output = date('s');
-
-// Get AM or PM
-$output = date('a');
-
-// Get full date and time
-$output = date('Y-m-d h:i:s a');
-
+$numbers = array_values($numbers); //rearrange the index
+inspect($numbers);
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -68,6 +50,7 @@ $output = date('Y-m-d h:i:s a');
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6 mt-6">
             <!-- Output -->
+            <p class="text-xl">Intro to Arrays</p>
             <p class="text-xl"><?php echo $output; ?></p>
         </div>
     </div>
