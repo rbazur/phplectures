@@ -9,22 +9,22 @@ $user = [
 ];
 
 // // Accessing elements
-// $output = $user['name'];
-// $output = $user['email'];
+$output = $user['name'];
+$output = $user['email'];
 
 // // Element that does not exist
-// // $output = $user['gender']; // Throws an error
+// $output = $user['gender']; // Throws an error
 
 // // Accessing nested elements
-// $output = $user['hobbies'][0];
+$output = $user['hobbies'][1];
 
 // // Adding a new element
-// $user['address'] = '123 Paghanapin Street';
-// $output = $user['address'];
+$user['address'] = '123 Paghanapin Street';
+$output = $user['address'];
 
 // // Removing element
 // unset($user['address']);
-// // $output = $user['address']; // Will resolve to an error
+$output = $user['address']; // Will resolve to an error
 ?>
 
 

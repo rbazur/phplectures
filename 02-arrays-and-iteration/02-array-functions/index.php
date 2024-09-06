@@ -4,59 +4,60 @@ $output = null;
 $ids = [10, 22, 15, 45, 67, 33];
 $users = ['user2', 'user1', 'user3'];
 
-// // count
-// $output = count($ids);
+// count
+$output = count($ids);
 
 
-// // sort
-// sort($ids);
-// sort($users);
+// // sort - self explanatory
+sort($ids);
+sort($users);
 
-// // rsort
-// rsort($ids);
-// rsort($users);
+// // rsort - reverse sort
+rsort($ids);
+rsort($users);
 
-// // array_push
-// array_push($ids, 100);
-// array_push($users, 'user4');
+// // array_push - maglalagay ng additional value sa dulo ng array
+array_push($ids, 100);
+array_push($users, 'user4');
 
-// // array_pop
-// array_pop($ids);
-// array_pop($users);
+// // array_pop - tanggal yung last
+array_pop($ids);
+array_pop($users);
 
-// // array_shift
-// array_shift($ids);
-// array_shift($users);
+// // array_shift - tanggal yung una
+array_shift($ids);
+array_shift($users);
 
-// // array_unshift
-// array_unshift($ids, 100);
-// array_unshift($users, 'user3');
+// // array_unshift - maglalagay sa unahan
+array_unshift($ids, 100);
+array_unshift($users, 'user3');
 
-// // array_slice
-// $ids2 = array_slice($ids, 2, 3);
-// // var_dump($ids2);
+// // array_slice -  this will return a part of the array as a new array
+$ids2 = array_slice($ids, 2, 3);
+var_dump($ids2);
 
 // // array_splice
-// array_splice($ids, 1, 1, 'New ID');
-// array_splice($users, 0, 1, 'New User');
+array_splice($ids, 1, 1, 'New ID');
+array_splice($users, 0, 1, 'New User');
+// array_splice($users, 0, 2, ['New User 1', 'New User 2']);
 
 // // array_sum
-// $output = 'Sum of IDs: ' . array_sum($ids);
+$output = 'Sum of IDs: ' . array_sum($ids);
 
 // // array_search
-// $output = 'User 2 is at index: ' . array_search('user2', $users);
+$output = 'User 2 is at index: ' . array_search('user2', $users);
 
-// array_push($users, 'user3');
+array_push($users, 'user3');
 // // in_array
-// $output = 'User 3 Exists: ' . in_array('user3', $users);
+$output = 'User 3 Exists: ' . in_array('user3', $users);
 
-// // explode
-// $tags = 'tech,code,programming';
-// $tagsArr = explode(',', $tags);
-// // var_dump($tagsArr);
+// // explode - string into array
+$tags = 'tech,code,programming';
+$tagsArr = explode(',', $tags);
+var_dump($tagsArr);
 
-// // implode
-// $output = implode(', ', $users);
+// // implode - array gagawing string
+$output = implode(', ', $users);
 
 // // PHP documentation](https://www.php.net/manual/en/ref.array.php).
 ?>
@@ -80,7 +81,7 @@ $users = ['user2', 'user1', 'user3'];
     <div class="container mx-auto p-4 mt-4">
         <div class="bg-white rounded-lg shadow-md p-6 mt-6">
             <!-- Output -->
-            <p class="text-xl"><?= $output ?></p>
+            <p class="text-xl">Output: <?= $output ?></p>
             <h2 class="text-xl font-semibold my-4">IDs Array:</h2>
             <p>
             <pre>
@@ -91,6 +92,12 @@ $users = ['user2', 'user1', 'user3'];
             <p>
             <pre>
           <?php print_r($users); ?>
+        </pre>
+            </p>
+            <h2 class="text-xl font-semibold my-4">Tags:</h2>
+            <p>
+            <pre>
+          <?php print_r($tagsArr); ?>
         </pre>
             </p>
         </div>

@@ -8,34 +8,34 @@ $fruits = [
 ];
 
 // // Accessing elements
-// $output = $fruits[0][0];
-// $output = $fruits[1][0];
+$output = $fruits[0][1];
+$output = $fruits[1][0];
 
 
 // // Multidimensional Associative Arrays
-// $users = [
-//   ['name' => 'John', 'email' => 'john@gmail.com', 'password' => 'secret'],
-//   ['name' => 'Mary', 'email' => 'mary@gmail.com', 'password' => 'secret'],
-//   ['name' => 'Jane', 'email' => 'jane@gmail.com', 'password' => 'secret']
-// ];
+$users = [
+  ['name' => 'John', 'email' => 'john@gmail.com', 'password' => 'secret'],
+  ['name' => 'Mary', 'email' => 'mary@gmail.com', 'password' => 'secret'],
+  ['name' => 'Jane', 'email' => 'jane@gmail.com', 'password' => 'secret']
+];
 
 // // Access email for the first user
-// $output = $users[0]['email'];
+$output = $users[0]['email'];
 
 // // Add a new user
-// $users[] = ['name' => 'Alex', 'email' => 'alex@gmail.com', 'password' => 'secret'];
+$users[] = ['name' => 'Alex', 'email' => 'alex@gmail.com', 'password' => 'secret'];
 
 // // Remove the last user
-// array_pop($users);
+array_pop($users);
 
 // // Remove the first user
-// array_shift($users);
+array_shift($users);
 
 // // Remove a specific user
-// unset($users[1]);
+unset($users[1]);
 
 // // Count users/elements
-// $output = count($users) . ' users in the array';
+$output = count($users) . ' users in the array';
 ?>
 
 <!DOCTYPE html>
