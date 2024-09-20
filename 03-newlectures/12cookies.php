@@ -1,5 +1,5 @@
 <?php
-echo '<h1>Cookies</h1>';
+echo '<h1>Cookies1</h1>';
 /* ------------- Cookies ------------ */
 
 /*
@@ -17,5 +17,3 @@ if (isset($_COOKIE['name'])) {
 
 //Delete the cookie
 setcookie('name', '', time() - 86400);
-
-?>
